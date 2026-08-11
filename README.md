@@ -136,3 +136,4 @@ frontend is hosted (including protocol/port) for cookies + CORS to work correctl
   backend's URL
 - Remember to set `NODE_ENV=production` and `secure: true` cookies will activate
   automatically (requires HTTPS in production)
+"# wallborn.attack-on-titan" 
