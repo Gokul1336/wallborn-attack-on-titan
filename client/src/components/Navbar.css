@@ -1,0 +1,104 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(13, 15, 20, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 32px;
+}
+
+.navbar__brand {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--bone);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.navbar__brand-mark {
+  color: var(--blood-iron-bright);
+  font-size: 1.1rem;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 28px;
+  flex: 1;
+}
+
+.navbar__link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  color: var(--bone);
+  border-bottom-color: var(--signal-flare);
+}
+
+.navbar__auth {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar__cta {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--blood-iron);
+  color: var(--bone);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+
+.navbar__cta:hover {
+  background: var(--blood-iron-bright);
+}
+
+.navbar__logout {
+  background: transparent;
+  border: 1px solid var(--border-hairline);
+  color: var(--bone-dim);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar__logout:hover {
+  border-color: var(--blood-iron-bright);
+  color: var(--blood-iron-bright);
+}
+
+@media (max-width: 860px) {
+  .navbar__links {
+    display: none;
+  }
+}

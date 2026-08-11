@@ -1,0 +1,99 @@
+/* ============================================================
+   PORTRAIT COMPONENT
+   ============================================================ */
+.portrait {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-hairline);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+
+/* Size variants */
+.portrait--sm  { width: 56px;   height: 70px;   }
+.portrait--md  { width: 100%;   height: 220px;  }
+.portrait--lg  { width: 100%;   aspect-ratio: 3/4; min-height: 280px; }
+
+/* ============================================================
+   REAL IMAGE MODE
+   ============================================================ */
+.portrait__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portrait:hover .portrait__image {
+  transform: scale(1.07);
+}
+
+/* Bottom vignette so card text sits cleanly below */
+.portrait__vignette {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to top, rgba(13,15,20,0.75), transparent);
+  pointer-events: none;
+}
+
+/* ============================================================
+   PLACEHOLDER MODE (initials)
+   ============================================================ */
+.portrait--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      color-mix(in srgb, var(--portrait-color, #3D5A6C) 50%, transparent),
+      transparent 60%
+    ),
+    linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--portrait-color, #3D5A6C) 30%, var(--void)) 0%,
+      var(--void) 100%
+    );
+}
+
+.portrait--titan.portrait--placeholder {
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      color-mix(in srgb, var(--portrait-color, #8B2635) 40%, transparent),
+      transparent 60%
+    ),
+    repeating-linear-gradient(
+      135deg,
+      var(--void),
+      var(--void) 8px,
+      color-mix(in srgb, var(--portrait-color, #8B2635) 8%, var(--void)) 8px,
+      color-mix(in srgb, var(--portrait-color, #8B2635) 8%, var(--void)) 16px
+    );
+}
+
+.portrait__initials {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 5cqi, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: color-mix(in srgb, var(--portrait-color, #3D5A6C) 65%, white);
+  opacity: 0.9;
+  user-select: none;
+}
+
+.portrait--sm .portrait__initials { font-size: 1rem; }
+
+/* Broken image fallback */
+.portrait--broken {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-raised);
+}

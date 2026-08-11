@@ -1,0 +1,232 @@
+.detail-page {
+  padding: 40px 0 80px;
+  position: relative;
+}
+
+.detail-page__video-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.detail-page__back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--bone-dim);
+  transition: color 0.15s ease;
+}
+
+.detail-page__back:hover {
+  color: var(--signal-flare);
+}
+
+.dossier {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+}
+
+.dossier__portrait-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 96px;
+  align-self: start;
+}
+
+.dossier__quick-facts {
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dossier__fact {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.dossier__fact:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dossier__threat-value {
+  color: var(--blood-iron-bright);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.dossier__header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.dossier__name {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 6px;
+}
+
+.dossier__title {
+  color: var(--bone-dim);
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0 0 24px;
+}
+
+.dossier__short-bio {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--bone);
+  padding: 18px 20px;
+  background: var(--surface);
+  border-left: 3px solid var(--signal-flare);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 36px;
+}
+
+.dossier__section {
+  margin-bottom: 36px;
+}
+
+.dossier__section-heading {
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  color: var(--signal-flare);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.dossier__section p {
+  line-height: 1.75;
+  color: var(--bone);
+  margin: 0;
+}
+
+.dossier__tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dossier__tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 8px 14px;
+  background: var(--surface);
+  border: 1px solid var(--steel-watch);
+  border-radius: 20px;
+  color: var(--steel-watch-bright);
+}
+
+.dossier__tag--danger {
+  border-color: var(--blood-iron);
+  color: var(--blood-iron-bright);
+}
+
+.dossier__related-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  max-width: 360px;
+  transition: border-color 0.15s ease;
+}
+
+.dossier__related-card:hover {
+  border-color: var(--signal-flare);
+}
+
+.dossier__related-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dossier__related-card strong {
+  color: var(--bone);
+  font-size: 0.95rem;
+}
+
+.dossier__arc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dossier__arc {
+  padding-left: 18px;
+  border-left: 2px solid var(--border-hairline);
+}
+
+.dossier__arc-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bone);
+  margin-bottom: 6px;
+}
+
+.dossier__arc p {
+  margin: 0;
+  color: var(--bone-dim);
+}
+
+.dossier__relationship-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dossier__relationship-list a {
+  text-transform: capitalize;
+}
+
+@media (max-width: 860px) {
+  .dossier {
+    grid-template-columns: 1fr;
+  }
+  .dossier__portrait-col {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .dossier__portrait-col .portrait--lg {
+    width: 160px;
+    aspect-ratio: 4/5;
+  }
+  .dossier__quick-facts {
+    flex: 1;
+    min-width: 200px;
+  }
+}

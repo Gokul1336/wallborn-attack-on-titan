@@ -1,0 +1,29 @@
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  color: var(--bone-dim);
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.fav-btn:hover {
+  border-color: var(--signal-flare);
+  color: var(--bone);
+}
+
+.fav-btn--active {
+  border-color: var(--signal-flare);
+  color: var(--signal-flare);
+}
+
+.fav-btn__icon {
+  font-size: 1rem;
+}

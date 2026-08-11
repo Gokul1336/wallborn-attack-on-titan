@@ -1,0 +1,34 @@
+.verify-banner {
+  background: rgba(201, 162, 75, 0.12);
+  border-bottom: 1px solid rgba(201, 162, 75, 0.3);
+}
+
+.verify-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--signal-flare);
+  position: relative;
+}
+
+.verify-banner__inner a {
+  color: var(--bone);
+  text-decoration: underline;
+}
+
+.verify-banner__close {
+  position: absolute;
+  right: 24px;
+  background: none;
+  border: none;
+  color: var(--signal-flare);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}

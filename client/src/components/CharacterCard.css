@@ -1,0 +1,65 @@
+.char-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.char-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--signal-flare);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(201,162,75,0.15);
+}
+
+/* Portrait fills the top of the card */
+.char-card .portrait {
+  width: 100%;
+  height: 240px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.char-card .portrait--md {
+  height: 240px;
+}
+
+.char-card__body {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.char-card__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.char-card__name {
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--bone);
+  line-height: 1.2;
+}
+
+.char-card__title {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--bone-dim);
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.char-card__rank {
+  margin-top: 6px;
+  color: var(--steel-watch-bright);
+  font-size: 0.7rem;
+}

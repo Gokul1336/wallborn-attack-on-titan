@@ -1,0 +1,141 @@
+.auth-page {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Login-only video background */
+.auth-page--login {
+  position: relative;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.auth-page--login .auth-page__video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.auth-page--login .auth-card {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 36px;
+}
+
+.auth-card h1 {
+  margin-top: 8px;
+  font-size: 1.8rem;
+}
+
+.auth-card__lede {
+  color: var(--bone-dim);
+  font-size: 0.92rem;
+  margin: 12px 0 28px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-form input {
+  background: var(--void);
+  border: 1px solid var(--border-hairline);
+  color: var(--bone);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.auth-form input:focus {
+  border-color: var(--signal-flare);
+}
+
+.auth-form button {
+  margin-top: 8px;
+  background: var(--blood-iron);
+  color: var(--bone);
+  border: none;
+  padding: 13px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.15s ease;
+}
+
+.auth-form button:hover:not(:disabled) {
+  background: var(--blood-iron-bright);
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-form__error {
+  color: var(--blood-iron-bright);
+}
+
+.auth-form__notice {
+  color: var(--signal-flare);
+}
+
+.auth-form__forgot {
+  align-self: flex-end;
+  margin-top: -8px;
+  color: var(--bone-dim);
+  transition: color 0.15s ease;
+}
+
+.auth-form__forgot:hover {
+  color: var(--signal-flare);
+}
+
+.auth-card__link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--signal-flare);
+  font-family: var(--font-mono);
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.auth-card__link-btn:hover {
+  color: var(--blood-iron-bright);
+}
+
+.auth-card__link-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-card__switch {
+  margin-top: 22px;
+  text-align: center;
+}

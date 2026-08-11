@@ -1,0 +1,109 @@
+.comments {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.comments__heading {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.comments__form textarea {
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  color: var(--bone);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  resize: vertical;
+}
+
+.comments__form button {
+  align-self: flex-start;
+  background: var(--steel-watch);
+  color: var(--bone);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.15s ease;
+}
+
+.comments__form button:hover:not(:disabled) {
+  background: var(--steel-watch-bright);
+}
+
+.comments__form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.comments__login-prompt {
+  margin-bottom: 24px;
+}
+
+.comments__error {
+  color: var(--blood-iron-bright);
+  margin-bottom: 16px;
+}
+
+.comments__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comments__item {
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.comments__item-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.comments__author {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--signal-flare);
+}
+
+.comments__body {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.comments__delete {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: var(--blood-iron-bright);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.comments__delete:hover {
+  text-decoration: underline;
+}
