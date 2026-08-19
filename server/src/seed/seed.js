@@ -1,8 +1,11 @@
 import 'dotenv/config';
+import dns from 'dns';
 import mongoose from 'mongoose';
 import { connectDB } from '../config/db.js';
 import Character from '../models/Character.js';
 import TitanKin from '../models/TitanKin.js';
+
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 
 const characters = [
 
